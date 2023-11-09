@@ -2,6 +2,7 @@ import './index.scss'
 import { useEffect, useRef } from 'react'
 
 function Logo() {
+
   return (
     <div className="logo-container" >
       <svg

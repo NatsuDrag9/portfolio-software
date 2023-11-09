@@ -4,7 +4,7 @@ npm i @fortawesome/free-brands-svg-icons
 npm i @fortawesome/free-solid-svg-icons
 npm i @fortawesome/react-fontawesome
 npm i animate.css
-npm i gsap-trial
+npm i gsap-trial -- not required
 npm i loaders.css
 
 # For leaflet maps
@@ -13,3 +13,5 @@ npm i react-leaflet
 npm i react-loaders
 npm i react-router-dom@6
 npm i sass
+
+----------------------------------------------------------------------------------------------------
