@@ -48,8 +48,7 @@ function Home() {
         </h1>
         <br />
         <h2>
-          Full Stack Developer | Embedded Software Developer | Firmware
-          Developer
+          Full Stack Developer | Software developer
         </h2>
         <Link to="/contact" className="flat-button">
           CONTACT ME
