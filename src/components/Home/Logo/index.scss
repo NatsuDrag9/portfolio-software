@@ -1,27 +1,51 @@
 @import '../../../App.scss';
 
 .logo-container {
-    z-index: 0;
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    top: 0;
-    right: 15%;
+  z-index: 0;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  right: 15%;
+  bottom: 0;
+  left: 50%;
+  margin: auto;
+  opacity: 1;
+
+  svg {
+    width: 100%;
+    height: auto;
     bottom: 0;
-    left: 50%;
-    margin: auto;
-    opacity: 1;
+    // transform: rotateZ(30deg) !important;
+  }
 
+  svg path {
+    stroke: $primary-color;
+    stroke-width: 10px;
+    stroke-dasharray: 6000;
+    stroke-dashoffset: 6000;
+    animation: drawPath 3s ease-in-out forwards;
+  }
 
-    svg {
-        width: 100%;
-        height: auto;
-        bottom: 0;
-        // transform: rotateZ(30deg) !important;
-    }
+  .path1 {
+    animation-delay: 1.1s;
+  }
 
-    svg path {
-        stroke: $primary-color;
-        stroke-width: 10px;
-    }
+  .path2,
+  .path3 {
+    animation-delay: 2.2s;
+  }
+
+  .path4,
+  .path5,
+  .path6,
+  .path7 {
+    animation-delay: 3.3s;
+  }
+}
+
+@keyframes drawPath {
+  to {
+    stroke-dashoffset: 0;
+  }
 }

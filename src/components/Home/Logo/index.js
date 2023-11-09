@@ -1,12 +1,12 @@
 import './index.scss'
 import { useEffect, useRef } from 'react'
-import gsap from 'gsap-trial'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
+// import gsap from 'gsap-trial'
+// import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
 
 function Logo() {
-  const bgRef = useRef()
-  const outlineLogoRef = useRef()
-  const fillLogoRef = useRef() // Ref for the filled paths
+  // const bgRef = useRef()
+  // const outlineLogoRef = useRef()
+  // const fillLogoRef = useRef() // Ref for the filled paths
   // gsap.config({trialWarn: false});
 
   /* No lines animation */
@@ -64,54 +64,54 @@ function Logo() {
   // }, []);
 
   /* Animating path stroke and fill */
-  useEffect(() => {
-    gsap.registerPlugin(DrawSVGPlugin)
+  // useEffect(() => {
+  //   gsap.registerPlugin(DrawSVGPlugin)
 
-    // Select all path elements within the outlineLogoRef
-    const paths = outlineLogoRef.current.querySelectorAll('path')
-    const filledPaths = fillLogoRef.current.querySelectorAll('path')
+  //   // Select all path elements within the outlineLogoRef
+  //   const paths = outlineLogoRef.current.querySelectorAll('path')
+  //   const filledPaths = fillLogoRef.current.querySelectorAll('path')
 
-    // Create an animation for each path and add it to a timeline
-    const tlOutline = gsap.timeline()
-    paths.forEach((path, index) => {
-      tlOutline
-        .from(path, {
-          duration: 1.5,
-          drawSVG: 0,
-          ease: 'power1.out',
-          stagger: 0, // Set a stagger of 0 to animate them simultaneously
-        })
-        .to(path, {
-          duration: 1.5,
-          drawSVG: '100%',
-          ease: 'power1.out',
-          stagger: 0,
-        })
-    })
+  //   // Create an animation for each path and add it to a timeline
+  //   const tlOutline = gsap.timeline()
+  //   paths.forEach((path, index) => {
+  //     tlOutline
+  //       .from(path, {
+  //         duration: 1.5,
+  //         drawSVG: 0,
+  //         ease: 'power1.out',
+  //         stagger: 0, // Set a stagger of 0 to animate them simultaneously
+  //       })
+  //       .to(path, {
+  //         duration: 1.5,
+  //         drawSVG: '100%',
+  //         ease: 'power1.out',
+  //         stagger: 0,
+  //       })
+  //   })
 
-    // Create a separate timeline for filling the paths
-    const tlFill = gsap.timeline()
-    filledPaths.forEach((path) => {
-      tlFill.fromTo(
-        path,
-        {
-          fill: 'transparent', // Start with transparent fill
-        },
-        {
-          duration: 1.5,
-          fill: '#ffd700', 
-        }
-      )
-    })
+  //   // Create a separate timeline for filling the paths
+  //   const tlFill = gsap.timeline()
+  //   filledPaths.forEach((path) => {
+  //     tlFill.fromTo(
+  //       path,
+  //       {
+  //         fill: 'transparent', // Start with transparent fill
+  //       },
+  //       {
+  //         duration: 1.5,
+  //         fill: '#ffd700',
+  //       }
+  //     )
+  //   })
 
-    // Combine both timelines
-    const mainTimeline = gsap.timeline()
-    mainTimeline.add(tlOutline, 0)
-    mainTimeline.add(tlFill, 12) // Start filling after 15 seconds (adjust as needed)
-  }, [])
+  //   // Combine both timelines
+  //   const mainTimeline = gsap.timeline()
+  //   mainTimeline.add(tlOutline, 0)
+  //   mainTimeline.add(tlFill, 12) // Start filling after 15 seconds (adjust as needed)
+  // }, [])
 
   return (
-    <div className="logo-container" ref={bgRef}>
+    <div className="logo-container" >
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
@@ -121,14 +121,14 @@ function Logo() {
         preserveAspectRatio="xMidYMid meet"
       >
         <g
-          ref={fillLogoRef}
+          // ref={fillLogoRef}
           transform="translate(0.000000,222.000000) scale(0.100000,-0.100000)"
           fill="none"
           stroke="none"
         >
-          <g ref={outlineLogoRef}>
-            <path
-              d="M1464 2163 c-234 -365 -297 -487 -323 -626 -21 -115 19 -195 142
+          {/* <g ref={outlineLogoRef}> */}
+          <path className='path1'
+            d="M1464 2163 c-234 -365 -297 -487 -323 -626 -21 -115 19 -195 142
           -283 123 -89 207 -175 207 -214 0 -14 -32 -12 -115 5 -158 33 -282 131 -305
           240 -6 30 -15 53 -20 50 -23 -14 -43 -97 -38 -162 7 -89 40 -155 113 -221 209
           -191 583 -189 782 6 73 72 104 140 104 229 0 69 -19 144 -38 150 -5 2 -15 -21
@@ -159,27 +159,27 @@ function Logo() {
           13 53 13 22 1 54 5 70 8 17 4 33 5 36 2 3 -3 15 -32 27 -64z m-220 48 c8 -3
           12 -30 12 -90 0 -75 -2 -85 -18 -85 -27 0 -132 19 -170 31 -36 12 -36 9 0 107
           l20 53 71 -6 c40 -4 78 -8 85 -10z"
-            />
+          />
 
-            <path
-              d="M40 883 c0 -31 102 -117 195 -165 90 -46 216 -90 480 -168 181 -53
+          <path className='path2'
+            d="M40 883 c0 -31 102 -117 195 -165 90 -46 216 -90 480 -168 181 -53
             260 -82 369 -138 142 -72 248 -185 281 -296 7 -22 18 -42 24 -44 19 -6 4 118
             -25 207 -68 206 -216 315 -514 379 -52 12 -183 33 -290 47 -107 14 -224 33
             -260 41 -97 22 -187 69 -218 115 -29 42 -42 48 -42 22z m531 -203 c370 -49
             530 -102 651 -218 34 -32 70 -80 88 -115 26 -53 38 -97 26 -97 -2 0 -31 27
             -64 59 -113 111 -241 172 -557 266 -270 80 -345 105 -345 116 0 13 29 11 201
             -11z"
-            />
-            <path
-              d="M2929 863 c-49 -75 -152 -112 -413 -148 -373 -52 -482 -77 -611 -141
+          />
+          <path className='path3'
+            d="M2929 863 c-49 -75 -152 -112 -413 -148 -373 -52 -482 -77 -611 -141
             -173 -85 -271 -231 -291 -433 -4 -49 -3 -71 5 -71 6 0 14 12 17 27 20 84 110
             201 202 265 99 69 255 131 521 208 291 84 386 122 496 195 53 35 125 107 125
             125 0 23 -28 8 -51 -27z m-289 -172 c0 -11 -77 -37 -356 -120 -304 -91 -442
             -158 -553 -269 -31 -31 -57 -50 -63 -44 -17 17 60 148 123 206 108 101 249
             155 510 195 262 41 339 48 339 32z"
-            />
-            <path
-              d="M270 532 c0 -15 166 -215 236 -286 119 -119 235 -195 353 -230 90
+          />
+          <path className='path4'
+            d="M270 532 c0 -15 166 -215 236 -286 119 -119 235 -195 353 -230 90
             -27 291 -17 291 14 0 13 -5 12 -73 -1 -42 -9 -76 -9 -134 0 -146 21 -234 85
             -298 213 -31 63 -57 158 -44 158 24 -1 212 -39 216 -44 4 -4 -1 -20 -11 -37
             -25 -42 -24 -123 1 -157 45 -60 107 -84 180 -70 47 10 99 60 109 106 10 47 13
@@ -188,13 +188,13 @@ function Logo() {
             -104 l88 -21 21 -71 c12 -39 32 -92 45 -118 33 -66 14 -63 -66 9 -66 60 -190
             200 -190 215 0 11 2 11 102 -14z m522 -114 c73 -24 86 -35 86 -72 0 -71 -62
             -132 -135 -132 -120 0 -177 131 -97 223 18 21 40 18 146 -19z"
-            />
-            <path
-              d="M916 274 c-26 -25 -20 -63 11 -70 50 -13 80 30 47 67 -21 23 -37 24
+          />
+          <path className='path5'
+            d="M916 274 c-26 -25 -20 -63 11 -70 50 -13 80 30 47 67 -21 23 -37 24
             -58 3z m44 -34 c0 -21 -24 -28 -35 -10 -8 14 3 30 21 30 8 0 14 -9 14 -20z"
-            />
-            <path
-              d="M2684 514 c-49 -38 -154 -69 -354 -104 -291 -51 -411 -92 -511 -178
+          />
+          <path className='path6'
+            d="M2684 514 c-49 -38 -154 -69 -354 -104 -291 -51 -411 -92 -511 -178
             -41 -36 -99 -107 -99 -124 0 -20 21 -4 56 43 21 28 56 65 78 81 l41 29 12 -47
             c22 -88 105 -142 191 -123 101 22 151 127 105 224 -9 19 -14 38 -10 41 8 9
             210 43 216 38 9 -8 -19 -99 -50 -163 -58 -118 -148 -181 -292 -202 -59 -9 -92
@@ -203,12 +203,12 @@ function Logo() {
             -215 -72 -65 -100 -75 -75 -27 9 17 29 70 44 118 l29 87 78 21 c90 24 114 28
             114 16z m-471 -118 c67 -86 6 -214 -103 -214 -79 0 -140 63 -134 138 3 34 7
             38 53 55 54 21 133 45 152 46 6 1 21 -11 32 -25z"
-            />
-            <path
-              d="M2037 272 c-30 -33 -15 -72 28 -72 42 0 59 44 29 74 -20 21 -37 20
+          />
+          <path className='path7'
+            d="M2037 272 c-30 -33 -15 -72 28 -72 42 0 59 44 29 74 -20 21 -37 20
             -57 -2z m46 -27 c7 -17 -8 -29 -28 -21 -17 6 -9 36 10 36 7 0 15 -7 18 -15z"
-            />
-          </g>
+          />
+          {/* </g> */}
         </g>
       </svg>
     </div>
