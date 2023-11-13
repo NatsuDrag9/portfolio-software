@@ -35,7 +35,8 @@ function About() {
               idx={15}
             />
           </h1>
-          <p>
+          {/* Embedded and full stack software */}
+          {/* <p>
             I graduated with a master degree from DTU and am passionate about
             software development as they automate and make inanimate objects
             come alive. My passion for technology has driven me to continuously
@@ -49,9 +50,35 @@ function About() {
             software systems or ensuring top-notch quality, I am committed to
             leveraging my skills and curiosity to drive innovation and
             excellence in the world of technology.
+          </p> */}
+
+          {/* Fullstack and software */}
+          <p>
+            I graduated with a master degree from DTU and am passionate about
+            software development as they automate and make inanimate objects
+            come alive. My passion for technology has driven me to continuously
+            expand my knowledge and expertise in software and full stack
+            development.Keeping a holistic approach to software development,
+            I've practiced test-driven development (TDD) and implemented unit
+            tests using GitHub Actions to ensure software quality.{' '}
+          </p>
+          <p>
+            As a person, I am a soft peace-loving curious nerd and enjoy
+            programming to the extent that I can spend days staring at the
+            screen either fixing bugs or/and watching youtube videos on
+            programming.
+          </p>
+          <p>
+            <h5>Tech stack: </h5>
+            <small>HTML, CSS, ReactJS, PostgreSQL, Django, Python, C/C++</small>
+            <h5>Associated Skills: </h5>{' '}
+            <small>
+              Linux terminal, TDD using JEST and CPPUTEST, Object-oriented
+              programming with C++, Node and npx, Git and Github, VSCode, CI
+            </small>
           </p>
         </div>
-        <div className="stage-cube-cont">
+        <div className="stage-cube-container">
           <div className="cubespinner one">
             <div className="face1">
               <FontAwesomeIcon icon={faHtml5} color="#DD0031" />
