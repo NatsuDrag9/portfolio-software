@@ -53,6 +53,7 @@ function About() {
           </p> */}
 
           {/* Fullstack and software */}
+          
           <p>
             I graduated with a master degree from DTU and am passionate about
             software development as they automate and make inanimate objects
