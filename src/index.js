@@ -8,9 +8,15 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    {/* For github pages */}
+    <BrowserRouter basename='/portfolio-software'>
       <App />
     </BrowserRouter>
+
+    {/* For localhost */}
+    {/* <BrowserRouter>
+      <App />
+    </BrowserRouter> */}
   </React.StrictMode>
 );
 
