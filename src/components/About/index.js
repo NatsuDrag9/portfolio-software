@@ -35,48 +35,53 @@ function About() {
               idx={15}
             />
           </h1>
-          {/* Embedded and full stack software */}
-          {/* <p>
-            I graduated with a master degree from DTU and am passionate about
-            software development as they automate and make inanimate objects
-            come alive. My passion for technology has driven me to continuously
-            expand my knowledge and expertise in software and embedded systems
-            thus developing skills in full stack and embedded software.{' '}
-          </p>
-          <p>
-            Keeping a holistic approach to software development, I've practiced
-            test-driven development (TDD) and implemented unit tests using
-            GitHub Actions to ensure software quality. Whether it's optimizing
-            software systems or ensuring top-notch quality, I am committed to
-            leveraging my skills and curiosity to drive innovation and
-            excellence in the world of technology.
-          </p> */}
-
-          {/* Fullstack and software */}
-          
-          <p>
-            I graduated with a master degree from DTU and am passionate about
-            software development as they automate and make inanimate objects
-            come alive. My passion for technology has driven me to continuously
-            expand my knowledge and expertise in software and full stack
-            development.Keeping a holistic approach to software development,
-            I've practiced test-driven development (TDD) and implemented unit
-            tests using GitHub Actions to ensure software quality.{' '}
-          </p>
-          <p>
-            As a person, I am a soft peace-loving curious nerd and enjoy
-            programming to the extent that I can spend days staring at the
-            screen either fixing bugs or/and watching youtube videos on
-            programming.
-          </p>
-          <p>
-            <h5>Tech stack: </h5>
-            <small>HTML, CSS, ReactJS, PostgreSQL, Django, Python, C/C++</small>
-            <h5>Associated Skills: </h5>{' '}
-            <small>
-              Linux terminal, TDD using JEST and CPPUTEST, Object-oriented
-              programming with C++, Node and npx, Git and Github, VSCode, CI
-            </small>
+          <div className="text-wrapper">
+            <p>
+              I hold a master degree in Sustainable Energy from DTU but my
+              passion for technology has driven me to continuously expand my
+              knowledge and expertise in software and full stack development.
+            </p>
+            <p>
+              A nerdy researcher at heart, equipped wtih practical software
+              skills who enjoys making inanimate objects come alive
+            </p>
+          </div>
+          <p className="skill-wrapper">
+            <div className="skill">
+              <h4>Experience:</h4>
+              <small>Frontend developer intern at Savart and Allincall</small>
+              <small>
+                <span className="bold">Framework: </span>React + Typescript +
+                vite
+              </small>
+              <small>
+                <span className="bold">Key Learnings: </span>Engineer software
+                products catering to both, customer-centric and company’s
+                internal usage.
+              </small>
+            </div>
+            <div className="skill">
+              <h4>Tech stack: </h4>
+              <small>
+                <span className="bold">Languages: </span> C/C++, Python
+              </small>
+              <small>
+                <span className="bold">Frontned: </span> ReactJS, Typescript,
+                Node, Vite
+              </small>
+              <small>
+                <span className="bold">Backend: </span> Express server, RDBMS -
+                MySQL
+              </small>
+            </div>
+            <div className="skill">
+              <h4>Associated Skills and Tools: </h4>
+              <small>
+                Linux and shell scripting, TDD using JEST and Vitest,
+                Documentaion, Object-oriented programming, Git and Github,
+                VSCode, CI
+              </small>
+            </div>
           </p>
         </div>
         <div className="stage-cube-container">
