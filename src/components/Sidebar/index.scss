@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .nav-bar {
     background: #181818;
     width: 60px;
@@ -18,7 +20,7 @@
             height: auto;
 
             &.logo {
-                background-color: #ffd700;
+                background-color: $primary-color;
             }
 
             &.sub-logo {
@@ -38,6 +40,8 @@
         top: 50%;
         margin-top: -120px;
         width: 100%;
+        font-family: 'Coolvetica';
+        font-weight: 700;
 
         a {
             font-size: 22px;
@@ -53,7 +57,7 @@
             }
 
             &:hover {
-                color: #ffd700;
+                color: $primary-color;
 
                 svg {
                     opacity: 0;
@@ -98,7 +102,7 @@
 
         a.active {
             svg {
-                color: #ffd700;
+                color: $primary-color;
             }
         }
     }
@@ -121,7 +125,7 @@
                 line-height: 16px;
 
                 &:hover svg {
-                    color: #ffd700;
+                    color: $primary-color;
                 }
             }
         }

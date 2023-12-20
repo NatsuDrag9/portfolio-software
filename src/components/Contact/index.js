@@ -1,40 +1,39 @@
 import './index.scss'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { MapContainer, Marker, TileLayer } from 'react-leaflet'
+import { MapContainer, Marker, TileLayer, Popup } from 'react-leaflet'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 function Contact() {
   const [letterClass, setLetterClass] = useState('text-animate')
   const email = 'rohitimandi9@zoho.com'
+  const markerRef = useRef();
+  const timeoutRef = useRef();
 
   useEffect(() => {
-    setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       setLetterClass('text-animate-hover')
-    }, 4000)
-  }, [])
+    }, 4000);
 
-  //   const refForm = useRef()
-  //   const sendEmail = (e) => {
-  //     e.preventDefault()
-  //     emailjs.sendForm(
-  //       'portfolio_contact_form',
-  //       'contact_form_portfolio',
-  //       refForm.current,
-  //       'IGSXwpZYGD2qmHHsS'
-  //     )
-  //     .then(
-  //         () => {
-  //             alert('Message sent successfully!');
-  //             window.location.reload(false);
-  //         },
-  //         () => {
-  //             alert('Failed to send the message, please try again!');
-  //         }
-  //     )
-  //   }
+    return () => {
+      // Clear the timeout when the component unmounts
+      clearTimeout(timeoutRef.current);
+    };
+  }, [timeoutRef.current]);
+
+  const handleMouseOver = () => {
+    if (markerRef.current) {
+      markerRef.current.openPopup()
+    }
+  }
+
+  const handleMouseOut = () => {
+    if (markerRef.current) {
+      markerRef.current.closePopup()
+    }
+  }
 
   return (
     <>
@@ -48,66 +47,36 @@ function Contact() {
             />
           </h1>
           <div className="body">
-          <p>
-            I am looking for full-time opportunities in Denmark and other
-            European countries and, am open to relocating. Feel free to send me
-            a mail at {email}{' '}
-            <span className="email-wrapper">
-              <a href={`mailto:${email}`}>
-                <FontAwesomeIcon icon={faEnvelope} color="#5ED4F4" />
+            <p>
+              Feel free to send me a mail at {email} or connect with me on{''}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/rohit-imandi/"
+              >
+                <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
               </a>
-            </span>
-          </p>
+            </p>
           </div>
-
-          {/* <div className="contact-form">
-            <form ref={refForm} onSubmit={sendEmail}>
-              <ul>
-                <li className="half">
-                  <input type="text" name="name" placeholder="Name" required />
-                </li>
-                <li className="half">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email id"
-                    required
-                  />
-                </li>
-                <li>
-                  <input
-                    type="text"
-                    name="subject"
-                    placeholder="Subject"
-                    required
-                  />
-                </li>
-                <li>
-                  <textarea
-                    name="message"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                </li>
-                <li>
-                  <input type="submit" className="flat-button" value="SEND" />
-                </li>
-              </ul>
-            </form>
-          </div> */}
-        </div>
-        <div className="info-map">
-            Rohit Imandi,
-            <br />
-            Copenhagen
-            <br />
-            Denmark
         </div>
         <div className="map-wrap">
-            <MapContainer center={[55.6761, 12.5683]} zoom={13} >
-                <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <Marker position={[55.6761, 12.5683]}></Marker>
-            </MapContainer>
+          <MapContainer center={[55.6761, 12.5683]} zoom={13}>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Marker
+              ref={markerRef}
+              position={[55.6761, 12.5683]}
+              eventHandlers={{
+                mouseover: () => handleMouseOver(),
+                mouseout: () => handleMouseOut(),
+              }}
+            >
+              <Popup>
+                Copenhagen
+                <br />
+                DK
+              </Popup>
+            </Marker>
+          </MapContainer>
         </div>
       </div>
       <Loader type="pacman" />

@@ -1,7 +1,24 @@
 @import '../../App.scss';
 
+.contact-page {
+  // display: flex;
+  // flex-direction: column;
+}
+
 .body {
   width: 80%;
+
+  a {
+    display: inline-block;
+    margin-left: 1%;
+    vertical-align: baseline;
+    
+    &:hover {
+      svg {
+        color: $primary-color;
+      }
+    }
+  }
 }
 
 .email-wrapper {
@@ -9,27 +26,13 @@
   margin-left: 2%;
 }
 
-.info-map {
-  position: absolute;
-  background-color: #000;
-  top: 50px;
-  right: 30%;
-  z-index: 999999;
-  width: 267px;
-  padding: 20px;
-  color: #fff;
-  font-family: 'Helvetica';
-  font-size: 17px;
-  opacity: 0;
-  animation: fadeIn 1s 1.5s;
-  animation-iteration-count: forwards;
-}
-
 .map-wrap {
   background: rgba(8, 253, 216, 0.1);
   float: right;
-  width: 45%;
-  height: 100%;
+  width: 40%;
+  height: 60%;
+  margin-right: 5%;
+  margin-top: 5%;
 }
 
 .leaflet-container {
@@ -41,74 +44,10 @@
   animation-fill-mode: forwards;
 }
 
-// .contact-form {
-//     width: 100%;
-//     margin-top: 20px;
+.leaflet-popup-content {
+  color: black;
+ }
 
-//     ul {
-//         padding: 0;
-//         margin: 0;
+ @media screen and (max-width: $mobile-width) {
 
-//         li {
-//             padding: 0;
-//             margin: 0;
-//             list-style: none;
-//             margin-bottom: 10px;
-//             overflow: hidden;
-//             display: block;
-//             position: relative;
-//             opacity: 0;
-//             animation: fadeInUp 2s 2s;
-//             animation-fill-mode: forwards;
-//             clear: both;
-//         }
-
-//         li.half {
-//             width: 49%;
-//             margin-left: 2%;
-//             float: left;
-//             clear: none;
-
-//             &:first-child{
-//                 margin-left: 0;
-//             }
-//         }
-//     }
-
-//     input[type='text'],
-//     input[type='email']{
-//         width: 100%;
-//         border: 0;
-//         background: #115173;
-//         height: 50px;
-//         font-size: 16px;
-//         color: #fff;
-//         padding: 0 20px;
-//         box-sizing: border-box;
-//     }
-
-//     textarea {
-//         width: 100%;
-//         border: 0;
-//         background: #115173;;
-//         height: 50px;
-//         font-size: 16px;
-//         color: #fff;
-//         padding: 20px;
-//         min-height: 150px;
-//         box-sizing: border-box;
-//     }
-
-//     .flat-button {
-//         color: $primary-color;
-//         background: 0 0;
-//         font: 11px;
-//         letter-spacing: 3px;
-//         text-decoration: none;
-//         padding: 8px 10px;
-//         border: 1px solid $primary-color;
-//         float: right;
-//         border-radius: 4px;
-//         cursor: pointer;
-//     }
-// }
+ }
