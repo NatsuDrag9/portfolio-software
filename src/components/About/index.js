@@ -49,7 +49,7 @@ function About() {
           <p className="skill-wrapper">
             <div className="skill">
               <h4>Experience:</h4>
-              <small>Frontend developer intern at Savart and Allincall</small>
+              <small>Frontend developer at Savart and Allincall</small>
               <small>
                 <span className="bold">Framework: </span>React + Typescript +
                 vite
