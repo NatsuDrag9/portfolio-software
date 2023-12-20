@@ -7,15 +7,70 @@
 
 .body {
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
 
-  a {
-    display: inline-block;
-    margin-left: 1%;
-    vertical-align: baseline;
-    
-    &:hover {
+  .icons {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3%;
+
+    a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      font-family: 'Coolvetica';
+      text-decoration: none;
+
       svg {
-        color: $primary-color;
+        width: 30px;
+        height: 30px;
+      }
+
+      &:hover {
+        svg {
+          color: $primary-color;
+        }
+      }
+
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(3) {
+        &::after {
+          display: none;
+          width: 20%;
+          height: 20%;
+          color: $primary-color;
+          margin-top: 5%;
+          letter-spacing: 1.5px;
+        }
+      }
+
+      &:first-child:hover {
+        &::after {
+          content: 'LinkedIn';
+          display: block;
+        }
+      }
+
+      &:nth-child(2):hover {
+        &::after {
+          content: 'Github';
+          display: block;
+        }
+      }
+
+      &:nth-child(3):hover {
+        &::after {
+          content: 'Medium';
+          display: block;
+        }
       }
     }
   }
@@ -32,7 +87,7 @@
   width: 40%;
   height: 60%;
   margin-right: 5%;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 .leaflet-container {
@@ -46,8 +101,16 @@
 
 .leaflet-popup-content {
   color: black;
- }
+}
 
- @media screen and (max-width: $mobile-width) {
+@media screen and (max-width: $tablet-screen-width) {
+  .body {
+    .icons {
+      width: 60%;
+    }
+  }
 
- }
+  .map-wrap {
+    margin-top: 20%;
+  }
+}
