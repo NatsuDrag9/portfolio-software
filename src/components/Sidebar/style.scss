@@ -88,6 +88,12 @@
             }
         }
 
+        a.work-link {
+            &:after {
+                content: 'WORK';
+            }
+        }
+
         a.about-link {
             &:after {
                 content: 'ABOUT';
