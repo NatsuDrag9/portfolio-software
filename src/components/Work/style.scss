@@ -1,5 +1,146 @@
+@import '../../App.scss';
+
+$project-text-color: white;
+
 .work-page {
-    // height: 100%;
-    // width: 100%;
-    border: 1px solid white;
+  .project {
+    height: 500px;
+    width: 93%;
+    margin: 2% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-family: 'Coolvetica';
+      color: $primary-color;
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: capitalize;
+    }
+
+    .card-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: start;
+      width: 100%;
+      height: 95%;
+
+      .card-text {
+        width: 40%;
+        height: 70%;
+        font-size: 0.8rem;
+        color: $project-text-color;
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        .text-element {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+          width: 100%;
+
+          .bold {
+            display: inline-block;
+            width: auto;
+            font-weight: 700;
+          }
+
+          p {
+            width: 30%;
+            margin-left: 5%;
+          }
+        }
+      }
+
+      .card-image {
+        width: 32%;
+        height: 70%;
+
+        a {
+          text-decoration: none;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s ease-in-out;
+            border-radius: 20px;
+          }
+
+          img:hover {
+            filter: blur(3px);
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+        }
+      }
+
+      .links {
+        width: 30%;
+        height: 15%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        a {
+          width: 30px;
+          height: 30px;
+          text-decoration: none;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+
+          &:hover {
+            svg {
+              color: $primary-color;
+            }
+          }
+
+          &:first-child,
+          &:nth-child(2),
+          &:nth-child(3) {
+            &::after {
+              display: none;
+              width: 20%;
+              height: 20%;
+              color: $primary-color;
+              margin-top: 5%;
+              letter-spacing: 1.5px;
+            }
+          }
+    
+          &:first-child:hover {
+            &::after {
+              content: 'Demo';
+              display: block;
+            }
+          }
+    
+          &:nth-child(2):hover {
+            &::after {
+              content: 'Code';
+              display: block;
+            }
+          }
+    
+          &:nth-child(3):hover {
+            &::after {
+              content: 'Read';
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
 }
