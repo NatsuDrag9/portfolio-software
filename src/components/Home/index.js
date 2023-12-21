@@ -7,8 +7,8 @@ import Logo from './Logo'
 
 function Home() {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const nameArray = ['R', 'o', 'h', 'i', 't']
-  // const titleArray = ['P', 'a', 's', 's', 'i', 'o', 'n', 'a', 't', 'e', ' ', 'S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r'];
+  const nameArray = ['R', 'o', 'h', 'i', 't', ' ', 'I', 'm', 'a', 'n', 'd', 'i']
+  // const titleArray = ['P', 'a', 's', 's', 'i', 'o', 'n', 'a', 't', 'e', ' ', 'S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ', 'D ', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r'];
 
   useEffect(() => {
     setTimeout(() => {
