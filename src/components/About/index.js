@@ -38,12 +38,13 @@ function About() {
           <div className="text-wrapper">
             <p>
               I hold a master degree in Sustainable Energy from DTU but my
-              passion for technology has driven me to continuously expand my
-              knowledge and expertise in software and full stack development.
+              passion for software has driven me to continuously expand my
+              knowledge and expertise in software engineering and full stack
+              development.
             </p>
             <p>
               A nerdy researcher at heart, equipped wtih practical software
-              skills who enjoys making inanimate objects come alive
+              skills who enjoys making inanimate objects come alive.
             </p>
           </div>
           <p className="skill-wrapper">
@@ -56,7 +57,7 @@ function About() {
               </small>
               <small>
                 <span className="bold">Key Learnings: </span>Engineer software
-                products catering to both, customer-centric and company’s
+                products catering to both, customer-centric and for company’s
                 internal usage.
               </small>
             </div>
@@ -66,8 +67,8 @@ function About() {
                 <span className="bold">Languages: </span> C/C++, Python
               </small>
               <small>
-                <span className="bold">Frontned: </span> ReactJS, Typescript,
-                Node, Vite
+                <span className="bold">Frontend: </span> HTML, CSS, JS, React
+                JS, Typescript, Node, Vite, State management libraries
               </small>
               <small>
                 <span className="bold">Backend: </span> Express server, RDBMS -
@@ -75,7 +76,7 @@ function About() {
               </small>
             </div>
             <div className="skill">
-              <h4>Associated Skills and Tools: </h4>
+              <h4>Other Skills and Tools: </h4>
               <small>
                 Linux and shell scripting, TDD using JEST and Vitest,
                 Documentaion, Object-oriented programming, Git and Github,
