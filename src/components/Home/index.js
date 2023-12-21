@@ -50,9 +50,9 @@ function Home() {
         <h2>
           Full Stack Developer | Software developer
         </h2>
-        <Link to="/contact" className="flat-button">
+        {/* <Link to="/contact" className="flat-button">
           CONTACT ME
-        </Link>
+        </Link> */}
       </div>
       <Logo />
     </div>
