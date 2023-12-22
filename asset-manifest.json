@@ -1,20 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio-software/static/css/main.a2ec489e.css",
-    "main.js": "/portfolio-software/static/js/main.023b9d85.js",
+    "main.css": "/portfolio-software/static/css/main.79371b50.css",
+    "main.js": "/portfolio-software/static/js/main.73ee0921.js",
     "static/js/787.cf482a7c.chunk.js": "/portfolio-software/static/js/787.cf482a7c.chunk.js",
+    "static/media/tetris-react.webp": "/portfolio-software/static/media/tetris-react.301fe1967f42f261f0af.webp",
     "static/media/netflix-clone.webp": "/portfolio-software/static/media/netflix-clone.d2b31a26709c6964bca1.webp",
+    "static/media/trillo.webp": "/portfolio-software/static/media/trillo.ee7d31ee87f21e0a5241.webp",
+    "static/media/natours.webp": "/portfolio-software/static/media/natours.2b5ec483ccec3d5b3f8a.webp",
     "static/media/helvetica-neu.ttf": "/portfolio-software/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
     "static/media/LaBelleAurore.woff2": "/portfolio-software/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
+    "static/media/ds-algo.webp": "/portfolio-software/static/media/ds-algo.398f033db53450bc7294.webp",
     "static/media/CoolveticaRg-Regular.woff2": "/portfolio-software/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "static/media/logo-d1.svg": "/portfolio-software/static/media/logo-d1.d962ab8d1114d2523a311959377db008.svg",
     "index.html": "/portfolio-software/index.html",
-    "main.a2ec489e.css.map": "/portfolio-software/static/css/main.a2ec489e.css.map",
-    "main.023b9d85.js.map": "/portfolio-software/static/js/main.023b9d85.js.map",
+    "main.79371b50.css.map": "/portfolio-software/static/css/main.79371b50.css.map",
+    "main.73ee0921.js.map": "/portfolio-software/static/js/main.73ee0921.js.map",
     "787.cf482a7c.chunk.js.map": "/portfolio-software/static/js/787.cf482a7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2ec489e.css",
-    "static/js/main.023b9d85.js"
+    "static/css/main.79371b50.css",
+    "static/js/main.73ee0921.js"
   ]
 }
