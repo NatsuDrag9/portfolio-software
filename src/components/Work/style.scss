@@ -3,8 +3,8 @@
 $project-text-color: white;
 
 .work-page {
-  overflow: scroll;
-
+  overflow: auto;
+  
   .project-style-1 {
     height: 500px;
     width: 93%;
@@ -217,7 +217,7 @@ $project-text-color: white;
 
           p {
             font-size: 0.8rem;
-            color: $primary-color;
+            color: $project-text-color;
           }
 
           .links {
