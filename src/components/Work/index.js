@@ -149,7 +149,7 @@ function Work() {
             </div>
           </div>
         </div>
-        <div className="project-style-2 space">
+        <div className="project-style-2">
           <h2>Other Projects</h2>
           <div className="card-wrapper">
             <div className="card">
