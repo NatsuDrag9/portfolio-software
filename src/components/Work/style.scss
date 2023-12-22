@@ -3,7 +3,9 @@
 $project-text-color: white;
 
 .work-page {
-  .project {
+  overflow: scroll;
+
+  .project-style-1 {
     height: 500px;
     width: 93%;
     margin: 2% 5%;
@@ -83,11 +85,11 @@ $project-text-color: white;
       }
 
       .links {
-        width: 30%;
+        width: 40%;
         height: 15%;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
 
         a {
@@ -98,11 +100,13 @@ $project-text-color: white;
           svg {
             width: 100%;
             height: 100%;
+            transition: transform 0.2s ease-in-out;
           }
 
           &:hover {
             svg {
               color: $primary-color;
+              transform: scale(1.1);
             }
           }
 
@@ -111,7 +115,7 @@ $project-text-color: white;
           &:nth-child(3) {
             &::after {
               display: none;
-              width: 20%;
+              width: 30%;
               height: 20%;
               color: $primary-color;
               margin-top: 5%;
@@ -135,12 +139,166 @@ $project-text-color: white;
     
           &:nth-child(3):hover {
             &::after {
-              content: 'Read';
+              content: 'Read (Coming soon...)';
               display: block;
             }
           }
         }
       }
     }
+  }
+
+  .project-style-2 {
+    height: 400px;
+    width: 93%;
+    margin: 2% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-family: 'Coolvetica';
+      color: $primary-color;
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: capitalize;
+    }
+
+    .card-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      flex-wrap: wrap;
+      
+      .card {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+
+        .card-image {
+          width: 100%;
+          height: 70%;
+
+          a {
+            height: 100%;
+            width: 100%;
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              transition: transform 0.2s ease-in-out;
+              border-radius: 20px;
+            }
+
+            img:hover {
+              filter: blur(3px);
+              transform: scale(1.1);
+              cursor: pointer;
+            }
+          }
+        }
+
+        .card-text {
+          width: 100%;
+          height: 30%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+
+          p {
+            font-size: 0.8rem;
+            color: $primary-color;
+          }
+
+          .links {
+            width: 40%;
+            height: 15%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+    
+            a {
+              width: 25px;
+              height: 25px;
+              text-decoration: none;
+    
+              svg {
+                width: 100%;
+                height: 100%;
+                transition: transform 0.2s ease-in-out;
+              }
+    
+              &:hover {
+                svg {
+                  color: $primary-color;
+                  transform: scale(1.1);
+                }
+              }
+    
+              &:first-child,
+              &:nth-child(2),
+              &:nth-child(3) {
+                &::after {
+                  display: none;
+                  width: 30%;
+                  height: 20%;
+                  color: $primary-color;
+                  margin-top: 5%;
+                  letter-spacing: 1.5px;
+                }
+              }
+        
+              &:first-child:hover {
+                &::after {
+                  content: 'Demo';
+                  display: block;
+                }
+              }
+        
+              &:nth-child(2):hover {
+                &::after {
+                  content: 'Code';
+                  display: block;
+                }
+              }
+        
+              &:nth-child(3):hover {
+                &::after {
+                  content: 'Read';
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+
+        .card-text.ds-algo {
+          .links {
+            a {
+              &:nth-child(3):hover {
+                &::after {
+                  content: 'Read (Coming soon...)';
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .project-style-2.space {
+    margin-top: 5%;
   }
 }
