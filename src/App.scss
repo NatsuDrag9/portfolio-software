@@ -2,8 +2,14 @@
 @import '~loaders.css/src/animations/pacman.scss';
 
 $primary-color: #ffd700;
-$tablet-screen-width: 820px;
-$mobile-screen-width: 450px;
+
+// Screen widths
+$mdpi-screen-width: 1280px;
+$tablet-vertical-screen-width: 820px;
+$tablet-horizontal-screen-width: 1080px;
+$kindle-vertical-screen-width: 800px;
+$mobile-vertical-screen-width: 450px;
+$mobile-horizontal-screen-width: 930px;
 
 @font-face {
   font-family: 'Helvetica Neue';
