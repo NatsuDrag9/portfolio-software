@@ -1,118 +1,223 @@
 @import '../../App.scss';
 
-.contact-page {
-  // display: flex;
-  // flex-direction: column;
-}
-
-.body {
-  width: 80%;
+.text-zone {
+  position: absolute;
+  width: 40%;
+  height: 70%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-evenly;
   align-items: start;
+  margin-top: 5%;
 
-  .icons {
-    width: 50%;
-    height: auto;
+  .body {
+    width: 80%;
+    height: 40%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 3%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
 
-    a {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      font-family: 'Coolvetica';
-      text-decoration: none;
+    .icons {
+      width: 50%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3%;
 
-      svg {
+      a {
+        display: inline-block;
         width: 30px;
         height: 30px;
-        transition: transform 0.1s ease;
-      }
+        font-family: 'Coolvetica';
+        text-decoration: none;
 
-      &:hover {
         svg {
-          color: $primary-color;
-          transform: scale(1.2);
+          width: 30px;
+          height: 30px;
+          transition: transform 0.1s ease;
         }
-      }
 
-      &:first-child,
-      &:nth-child(2),
-      &:nth-child(3) {
-        &::after {
-          display: none;
-          width: 20%;
-          height: 20%;
-          color: $primary-color;
-          margin-top: 10%;
-          letter-spacing: 1.5px;
+        &:hover {
+          svg {
+            color: $primary-color;
+            transform: scale(1.2);
+          }
         }
-      }
 
-      &:first-child:hover {
-        &::after {
-          content: 'LinkedIn';
-          display: block;
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3) {
+          &::after {
+            display: none;
+            width: 20%;
+            height: 20%;
+            color: $primary-color;
+            margin-top: 10%;
+            letter-spacing: 1.5px;
+          }
         }
-      }
 
-      &:nth-child(2):hover {
-        &::after {
-          content: 'Github';
-          display: block;
+        &:first-child:hover {
+          &::after {
+            content: 'LinkedIn';
+            display: block;
+          }
         }
-      }
 
-      &:nth-child(3):hover {
-        &::after {
-          content: 'Medium';
-          display: block;
+        &:nth-child(2):hover {
+          &::after {
+            content: 'Github';
+            display: block;
+          }
+        }
+
+        &:nth-child(3):hover {
+          &::after {
+            content: 'Medium';
+            display: block;
+          }
         }
       }
     }
   }
-}
-
-.email-wrapper {
-  display: inline-block;
-  margin-left: 2%;
 }
 
 .map-wrap {
   background: rgba(8, 253, 216, 0.1);
-  float: right;
-  width: 40%;
-  height: 60%;
-  margin-right: 5%;
-  margin-top: 10%;
-}
+  width: 45%;
+  height: 65%;
+  margin-top: 5%;
+  margin-left: 50%;
 
-.leaflet-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  opacity: 0;
-  animation: backInRight 1s 1.2s;
-  animation-fill-mode: forwards;
-}
-
-.leaflet-popup-content {
-  color: black;
-}
-
-@media screen and (max-width: $tablet-screen-width) {
-  .body {
-    .icons {
-      width: 60%;
-    }
+  .leaflet-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+    animation: backInRight 1s 1.2s;
+    animation-fill-mode: forwards;
   }
 
-  .map-wrap {
-    margin-top: 20%;
+  .leaflet-popup-content {
+    color: black;
+  }
+}
+
+@media screen and (max-width: $tablet-horizontal-screen-width) {
+  .text-zone {
+    .body {
+      font-size: 0.1rem;
+
+      .icons {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-horizontal-screen-width) {
+  .contact-page {
+    .text-zone {
+      height: 40%;
+      width: 50%;
+
+      .body {
+        height: 40%;
+        width: 70%;
+
+        .icons {
+          width: 60%;
+        }
+      }
+    }
+
+    .map-wrap {
+      height: 40%;
+      width: 40%;
+      margin-top: 7%;
+      margin-left: 50%; 
+    }
+
+  }
+}
+
+@media screen and (max-width: $tablet-vertical-screen-width) {
+  .contact-page {
+    .text-zone {
+      height: 50%;
+      width: 70%;
+
+      .body {
+        height: 40%;
+        width: 100%;
+
+        .icons {
+          width: 60%;
+        }
+      }
+    }
+
+    .map-wrap {
+      height: 30%;
+      margin-top: 60%;
+      width: 70%;
+      margin-left: 10%; 
+    }
+
+  }
+}
+
+@media screen and (max-width: $kindle-vertical-screen-width) {
+  .contact-page {
+    .text-zone {
+      height: 40%;
+      width: 70%;
+
+      .body {
+        height: 40%;
+        width: 100%;
+
+        .icons {
+          width: 60%;
+        }
+      }
+    }
+
+    .map-wrap {
+      height: 45%;
+      width: 65%;
+      margin-top: 60%;
+      margin-left: 10%; 
+    }
+
+  }
+}
+
+@media screen and (max-width: $mobile-vertical-screen-width) {
+  .contact-page {
+    .text-zone {
+      height: 50%;
+      width: 70%;
+
+      .body {
+        height: 40%;
+        width: 100%;
+
+        .icons {
+          width: 60%;
+        }
+      }
+    }
+
+    .map-wrap {
+      height: 30%;
+      margin-top: 100%;
+      width: 70%;
+      margin-left: 0; 
+    }
+
   }
 }
