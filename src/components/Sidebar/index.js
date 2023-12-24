@@ -42,7 +42,7 @@ function Sidebar() {
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>
       </nav>
-      <ul>
+      {/* <ul>
         <li>
             <a target="_blank" rel='noreferrer' href='https://www.linkedin.com/in/rohit-imandi/'>
                 <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
@@ -58,7 +58,7 @@ function Sidebar() {
                 <FontAwesomeIcon icon={faMedium} color="#4d4d4e" />
             </a>
         </li>
-      </ul>
+      </ul> */}
     </div>
   )
 }
