@@ -50,6 +50,7 @@
         &:first-child,
         &:nth-child(2),
         &:nth-child(3) {
+          font-size: 0.8rem;
           &::after {
             display: none;
             width: 20%;
@@ -138,9 +139,8 @@
       height: 40%;
       width: 40%;
       margin-top: 7%;
-      margin-left: 50%; 
+      margin-left: 50%;
     }
-
   }
 }
 
@@ -164,9 +164,8 @@
       height: 30%;
       margin-top: 60%;
       width: 70%;
-      margin-left: 10%; 
+      margin-left: 10%;
     }
-
   }
 }
 
@@ -190,9 +189,8 @@
       height: 45%;
       width: 65%;
       margin-top: 60%;
-      margin-left: 10%; 
+      margin-left: 10%;
     }
-
   }
 }
 
@@ -216,8 +214,7 @@
       height: 30%;
       margin-top: 100%;
       width: 70%;
-      margin-left: 0; 
+      margin-left: 0;
     }
-
   }
 }
