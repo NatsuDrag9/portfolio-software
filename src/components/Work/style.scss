@@ -138,7 +138,7 @@ $project-text-color: white;
     
           &:nth-child(3):hover {
             &::after {
-              content: 'Read (Coming soon...)';
+              content: 'Read';
               display: block;
             }
           }
@@ -286,7 +286,7 @@ $project-text-color: white;
             a {
               &:nth-child(3):hover {
                 &::after {
-                  content: 'Read (Coming soon...)';
+                  content: 'Read';
                 }
               }
             }

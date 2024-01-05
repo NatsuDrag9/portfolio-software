@@ -1,4 +1,4 @@
-import './index.scss'
+import './style.scss'
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
@@ -40,10 +40,7 @@ function About() {
               I hold a master degree in Sustainable Energy from DTU but my
               passion for software has driven me to continuously expand my
               knowledge and expertise in software engineering and full stack
-              development.
-            </p>
-            <p>
-              A nerdy researcher at heart, equipped wtih practical software
+              development. A nerdy researcher at heart, equipped wtih practical software
               skills who enjoys making inanimate objects come alive.
             </p>
           </div>

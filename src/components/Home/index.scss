@@ -1,7 +1,9 @@
+@import "../../App.scss";
+
 .home-page {
     .text-zone {
         position: absolute;
-        left: 10%;
+        left: 5%;
         top: 50%;
         transform: translateY(-50%);
         width: 40%;
@@ -65,6 +67,14 @@
         &:hover {
             background: #ffd700;
             color: #333;
+        }
+    }
+}
+
+@media screen and (max-width: $mdpi-screen-width) {
+    .home-page {
+        .text-zone {
+            left: 2%;
         }
     }
 }

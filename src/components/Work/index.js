@@ -61,7 +61,7 @@ function Work() {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://github.com/NatsuDrag9/netflix-clone"
+                  href="https://medium.com/@rohitimandi/netflix-clone-405bcf59addd"
                 >
                   <FontAwesomeIcon icon={faMedium} color="#4d4d4e" />
                 </a>
@@ -140,7 +140,7 @@ function Work() {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://rohitimandi.medium.com/tetris-game-using-react-hooks-daf958b90ed0"
+                    href="https://rohitimandi.medium.com/visualizing-data-structures-and-algorithms-f86e41a15c40"
                   >
                     <FontAwesomeIcon icon={faMedium} color="#4d4d4e" />
                   </a>
