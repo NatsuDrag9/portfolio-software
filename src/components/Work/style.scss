@@ -3,8 +3,13 @@
 $project-text-color: white;
 
 .work-page {
-  overflow: auto;
-  
+  overflow-y: scroll;
+  overflow-x: none;
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   .project-style-1 {
     height: 400px;
     width: 93%;
@@ -121,21 +126,21 @@ $project-text-color: white;
               letter-spacing: 1.5px;
             }
           }
-    
+
           &:first-child:hover {
             &::after {
               content: 'Demo';
               display: block;
             }
           }
-    
+
           &:nth-child(2):hover {
             &::after {
               content: 'Code';
               display: block;
             }
           }
-    
+
           &:nth-child(3):hover {
             &::after {
               content: 'Read';
@@ -173,7 +178,7 @@ $project-text-color: white;
       width: 100%;
       height: 100%;
       flex-wrap: wrap;
-      
+
       .card {
         width: 30%;
         height: 100%;
@@ -225,25 +230,25 @@ $project-text-color: white;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-    
+
             a {
               width: 25px;
               height: 25px;
               text-decoration: none;
-    
+
               svg {
                 width: 100%;
                 height: 100%;
                 transition: transform 0.2s ease-in-out;
               }
-    
+
               &:hover {
                 svg {
                   color: $primary-color;
                   transform: scale(1.1);
                 }
               }
-    
+
               &:first-child,
               &:nth-child(2),
               &:nth-child(3) {
@@ -256,21 +261,21 @@ $project-text-color: white;
                   letter-spacing: 1.5px;
                 }
               }
-        
+
               &:first-child:hover {
                 &::after {
                   content: 'Demo';
                   display: block;
                 }
               }
-        
+
               &:nth-child(2):hover {
                 &::after {
                   content: 'Code';
                   display: block;
                 }
               }
-        
+
               &:nth-child(3):hover {
                 &::after {
                   content: 'Read';

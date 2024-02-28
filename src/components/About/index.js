@@ -37,35 +37,35 @@ function About() {
           </h1>
           <div className="text-wrapper">
             <p>
-              I hold a master degree in Sustainable Energy from DTU but my
-              passion for software has driven me to continuously expand my
-              knowledge and expertise in software engineering and full stack
-              development. A nerdy researcher at heart, equipped wtih practical software
-              skills who enjoys making inanimate objects come alive.
+              A versatile developer with a keen focus on translating complex
+              requirements into engaging web applications. I bring a blend of
+              technical expertise and collaborative spirit coupled with the
+              ability to adapt and quickly learn new technologies.
+              In my free time, I have a lot of fun playing and developing games.
             </p>
           </div>
           <p className="skill-wrapper">
             <div className="skill">
               <h4>Experience:</h4>
-              <small>Frontend developer at Savart and Allincall</small>
+              <small>Software Development Engineer at Savart (remote)</small>
+              <small>Frontend Developer at Allicall</small>
               <small>
-                <span className="bold">Framework: </span>React + Typescript +
-                vite
+                <span className="bold">Framework: </span>React, Typescript, vite
               </small>
               <small>
-                <span className="bold">Key Learnings: </span>Engineer software
-                products catering to both, customer-centric and for company’s
-                internal usage.
+                <span className="bold">Technical Skills: </span>Design for
+                maintenability and reusability; Working in team;
               </small>
             </div>
             <div className="skill">
               <h4>Tech stack: </h4>
               <small>
-                <span className="bold">Languages: </span> C/C++, Python
+                <span className="bold">Languages: </span> C/C++; HTML, CSS, JS,
+                TS
               </small>
               <small>
-                <span className="bold">Frontend: </span> HTML, CSS, JS, React
-                JS, Typescript, Node, Vite, State management libraries
+                <span className="bold">Frontend: </span> React, Node, Vite,
+                State management libraries
               </small>
               <small>
                 <span className="bold">Backend: </span> Express server, RDBMS -
@@ -76,8 +76,7 @@ function About() {
               <h4>Other Skills and Tools: </h4>
               <small>
                 Linux and shell scripting, TDD using JEST and Vitest,
-                Documentaion, Object-oriented programming, Git and Github,
-                VSCode, CI
+                Documentation, Git and Github, VSCode, CI
               </small>
             </div>
           </p>

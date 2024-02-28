@@ -5,8 +5,8 @@ import { faGithub, faMedium } from '@fortawesome/free-brands-svg-icons'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 import NetflixWebpImg from '../../assets/images/work/netflix-clone.webp'
 import DsAlgoWebpImg from '../../assets/images/work/ds-algo.webp'
-import NatoursWebpImg from '../../assets/images/work/natours.webp'
-import TrilloWebpImg from '../../assets/images/work/trillo.webp'
+// import NatoursWebpImg from '../../assets/images/work/natours.webp'
+// import TrilloWebpImg from '../../assets/images/work/trillo.webp'
 import TetrisWebpImg from '../../assets/images/work/tetris-react.webp'
 
 function Work() {
@@ -29,6 +29,11 @@ function Work() {
               <p>
                 A fullstack application providing access to entertainment. The
                 user authentication and login is implemented using JSW.
+                <br />
+                <small>
+                  Appologies for any issues during the demo as this application
+                  is under development...
+                </small>
               </p>
               <div className="text-element">
                 <span className="bold">Frontend: </span>
@@ -120,7 +125,10 @@ function Work() {
                 </a>
               </div>
               <div className="card-text ds-algo">
-                <p>Visualizing Data Structures and Algorithms using Typescript + Vite (Work in progress...)</p>
+                <p>
+                  Visualizing Data Structures and Algorithms using Typescript +
+                  Vite
+                </p>
                 <div className="links">
                   <a
                     target="_blank"
@@ -149,7 +157,7 @@ function Work() {
             </div>
           </div>
         </div>
-        <div className="project-style-2">
+        {/* <div className="project-style-2">
           <h2>Other Projects</h2>
           <div className="card-wrapper">
             <div className="card">
@@ -213,7 +221,7 @@ function Work() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <Loader type="pacman" />
     </>
